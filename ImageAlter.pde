@@ -17,7 +17,7 @@ PImage crt;
 float multiplier;
 Timer timer = new Timer();
 
-Rect big = new Rect(0, 0, 0, 0);
+Rect big = new Rect(1, 1, 1, 1);
 
 void setup() {
   size(640, 480);
