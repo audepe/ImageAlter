@@ -10,12 +10,21 @@ TimerTask timerTask = new TimerTask()
   }
 };
 
+TimerTask reloadTask = new TimerTask()
+{
+  public void run() 
+  {
+    crt = loadImage(dataPath("crt.png"));
+  }
+};
+
 float ratio;
 CVFaces detector;
 Capture cap;
 PImage crt;
 float multiplier;
 Timer timer = new Timer();
+Timer timer_r = new Timer();
 
 Rect big = new Rect(1, 1, 1, 1);
 
@@ -33,6 +42,7 @@ void setup() {
   cap = new Capture(this, width, height);
   cap.start();
   timer.scheduleAtFixedRate(timerTask, 500, 2*1000);
+  timer_r.scheduleAtFixedRate(reloadTask, 5000, 10*1000);
 }
 void draw() {
   if (!cap.available())
