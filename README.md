@@ -10,7 +10,7 @@ Implementación de filtros y detección facial en *Processing* haciendo uso de *
 Para asegurar su funcionamiento en Linux es obligatorio el uso de la versión de *Processing Video* enlazada, para su funcionamiento se requiere tener instalado *tesseract-ocr* que puede obtenerse mediante el gestor de paquetes de la mayoría de distros.
 
 # Implementación
-**Imagealter.pde** gestiona el dibujado y modificación de la imagen.
+**Imagealter.pde** gestiona el dibujado y modificación de la imagen.  
 **CVFaces.pde** detecta las caras usando OpenCV.
 Se ha optado por solo detectar una cara dado que OpenCV detecta numerosas caras inexistentes si las condiciones no son óptimas.
 
